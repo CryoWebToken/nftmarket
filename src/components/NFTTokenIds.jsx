@@ -246,20 +246,20 @@ function NFTTokenIds({ inputValue, setInputValue }) {
             ))}
 
           {inputValue !== "explore" &&
-            NFTTokenIds.slice(0, 20).map((nft, index) => (
+            NFTTokenIds.slice(0, 100).map((nft, index) => (
               <Card
                 hoverable
                 actions={[
                   <Tooltip title="View On Blockexplorer">
-                    <FileSearchOutlined
-                      onClick={() =>
-                        window.open(
-                          `${getExplorer(chainId)}address/${nft.token_address}`,
-                          "_blank"
-                        )
-                      }
-                    />
-                  </Tooltip>,
+                  <FileSearchOutlined
+                    onClick={() =>
+                      window.open(
+                        `${getExplorer(chainId)}token/${nft.token_address}?a=${`${nft.token_id}`}`,
+                        "_blank"
+                      )
+                    }
+                  />
+                </Tooltip>,
                   <Tooltip title="Buy NFT">
                     <ShoppingCartOutlined onClick={() => handleBuyClick(nft)} />
                   </Tooltip>,

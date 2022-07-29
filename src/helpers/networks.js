@@ -35,7 +35,7 @@ export const networkConfigs = {
     blockExplorerUrl: "https://cchain.explorer.avax.network/",
   },
   "0x38": {
-    chainId: 56,
+    chainId: 38,
     chainName: "Smart Chain",
     currencyName: "BNB",
     currencySymbol: "BNB",

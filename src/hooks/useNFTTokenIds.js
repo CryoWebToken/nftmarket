@@ -19,7 +19,7 @@ export const useNFTTokenIds = (addr) => {
   } = useMoralisWeb3ApiCall(token.getAllTokenIds, {
     chain: chainId,
     address: addr,
-    limit: 10,
+    limit: 80,
   });
 
   useEffect(async () => {

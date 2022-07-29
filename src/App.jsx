@@ -82,10 +82,10 @@ const App = ({ isServerInfo }) => {
             defaultSelectedKeys={["nftMarket"]}
           >
             <Menu.Item key="nftMarket" onClick={() => setInputValue("explore")} >
-              <NavLink to="/NFTMarketPlace">🛒 Explore Market</NavLink>
+              <NavLink to="/NFTMarketPlace">🛒 Marketplace</NavLink>
             </Menu.Item>
             <Menu.Item key="nft">
-              <NavLink to="/nftBalance">🖼 Your Collection</NavLink>
+              <NavLink to="/nftBalance">🖼 Your NFTs</NavLink>
             </Menu.Item>
             <Menu.Item key="transactions">
               <NavLink to="/Transactions">📑 Your Transactions</NavLink>
@@ -114,36 +114,36 @@ const App = ({ isServerInfo }) => {
       </Router>
       <Footer style={{ textAlign: "center" }}>
         <Text style={{ display: "block" }}>
-          ⭐️ Please star this{" "}
+          ⭐️ Read more about how{" "}
           <a
-            href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
+            href="https://cryogen.life"
             target="_blank"
             rel="noopener noreferrer"
           >
-            boilerplate
+            Cryogen
           </a>
-          , every star makes us very happy!
+           , is leading the way to Web3!
         </Text>
 
         <Text style={{ display: "block" }}>
-          🙋 You have questions? Ask them on the {""}
+          🙋 Contact us to add your collection {""}
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
+            href="https://cryogen.life"
           >
-            Moralis forum
+            Add Your Collection
           </a>
         </Text>
 
         <Text style={{ display: "block" }}>
-          📖 Read more about{" "}
+          📖 Advertise here, contact for rates.{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
+            href="https://cryogen.life"
           >
-            Moralis
+            Advertising
           </a>
         </Text>
       </Footer>

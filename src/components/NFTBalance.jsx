@@ -181,7 +181,7 @@ function NFTBalance() {
                   <FileSearchOutlined
                     onClick={() =>
                       window.open(
-                        `${getExplorer(chainId)}address/${nft.token_address}`,
+                        `${getExplorer(chainId)}token/${nft.token_address}?a=${`${nft.token_id}`}`,
                         "_blank"
                       )
                     }
@@ -203,7 +203,7 @@ function NFTBalance() {
               }
               key={index}
             >
-              <Meta title={nft.name} description={nft.contract_type} />
+              <Meta title={nft.name} description={`#${nft.token_id}`} />
             </Card>
           ))}
       </div>
@@ -229,6 +229,7 @@ function NFTBalance() {
         <Spin spinning={loading}>
           <img
             src={`${nftToSend?.image}`}
+            alt={`nft`}
             style={{
               width: "250px",
               margin: "auto",
@@ -238,7 +239,7 @@ function NFTBalance() {
           />
           <Input
             autoFocus
-            placeholder="Listing Price in MATIC"
+            placeholder="Listing Price in BNB"
             onChange={(e) => setPrice(e.target.value)}
           />
         </Spin>
