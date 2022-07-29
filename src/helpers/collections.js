@@ -4,7 +4,7 @@ export const networkCollections = {
     {
       image:
         "https://cryogen.life/images/smallICO.png",
-      name: "Cryopunks",
+      name: "CryoPunks",
       addrs: "0x89bd6e2304e431B5BF9a999f99D7912e68a9f5ec",
     },
     {
