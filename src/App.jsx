@@ -126,11 +126,11 @@ const App = ({ isServerInfo }) => {
         </Text>
 
         <Text style={{ display: "block" }}>
-          🙋 Contact us to add your collection {""}
+          🙋 Contact us on our TG to add your collection {""}
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://cryogen.life"
+            href="https://t.me/cryowebtoken"
           >
             Add Your Collection
           </a>
