@@ -10,6 +10,7 @@ import {
 import Account from "components/Account";
 import Chains from "components/Chains";
 import NFTBalance from "components/NFTBalance";
+import NFTRarity from "components/NFTRarity";
 import NFTTokenIds from "components/NFTTokenIds";
 import { Menu, Layout, Image} from "antd";
 import SearchCollections from "components/SearchCollections";
@@ -84,6 +85,9 @@ const App = ({ isServerInfo }) => {
             <Menu.Item key="nftMarket" onClick={() => setInputValue("explore")} >
               <NavLink to="/NFTMarketPlace">🛒 Marketplace</NavLink>
             </Menu.Item>
+            <Menu.Item key="nftRarity" onClick={() => setInputValue("explore")} >
+              <NavLink to="/NFTRarity">🛒 Rarity Ranking</NavLink>
+            </Menu.Item>
             <Menu.Item key="nft">
               <NavLink to="/nftBalance">🖼 Your NFTs</NavLink>
             </Menu.Item>
@@ -101,6 +105,9 @@ const App = ({ isServerInfo }) => {
           <Switch>
             <Route path="/nftBalance">
               <NFTBalance />
+            </Route>
+            <Route path="/nftRarity">
+              <NFTRarity />
             </Route>
             <Route path="/NFTMarketPlace">
               <NFTTokenIds inputValue={inputValue} setInputValue={setInputValue}/>

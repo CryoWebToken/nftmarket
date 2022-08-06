@@ -68,7 +68,8 @@ function NFTTokenIds({ inputValue, setInputValue }) {
   const nativeName = getNativeByChain(chainId);
   const contractABIJson = JSON.parse(contractABI);
   const { Moralis } = useMoralis();
-  const queryMarketItems = useMoralisQuery("MarketItems");
+  const queryMarketItems = useMoralisQuery("MarketItems", query =>
+  query.limit(1000));
   const fetchMarketItems = JSON.parse(
     JSON.stringify(queryMarketItems.data, [
       "objectId",
@@ -246,7 +247,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
             ))}
 
           {inputValue !== "explore" &&
-            NFTTokenIds.slice(0, 400).map((nft, index) => (
+            NFTTokenIds.slice(0, 1000).map((nft, index) => (
               <Card
                 hoverable
                 actions={[
@@ -306,6 +307,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                 >
                   <img
                     src={nftToBuy?.image}
+                    alt=""
                     style={{
                       width: "250px",
                       borderRadius: "10px",
@@ -325,6 +327,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
           >
             <img
               src={nftToBuy?.image}
+              alt=""
               style={{
                 width: "250px",
                 margin: "auto",
